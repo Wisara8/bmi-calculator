@@ -31,35 +31,31 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         selectedGender = GenderType.male;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == GenderType.male
-                          ? activeCardColour
-                          : inactiveCardColour,
-                      cardChild: IconContent(
-                          cardIcon: FontAwesomeIcons.mars, cardText: "MALE"),
-                    ),
+                    colour: selectedGender == GenderType.male
+                        ? activeCardColour
+                        : inactiveCardColour,
+                    cardChild: IconContent(
+                        cardIcon: FontAwesomeIcons.mars, cardText: "MALE"),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         selectedGender = GenderType.female;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == GenderType.female
-                          ? activeCardColour
-                          : inactiveCardColour,
-                      cardChild: IconContent(
-                          cardIcon: FontAwesomeIcons.venus, cardText: 'FEMALE'),
-                    ),
+                    colour: selectedGender == GenderType.female
+                        ? activeCardColour
+                        : inactiveCardColour,
+                    cardChild: IconContent(
+                        cardIcon: FontAwesomeIcons.venus, cardText: 'FEMALE'),
                   ),
                 ),
               ],
